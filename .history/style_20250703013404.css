@@ -1,0 +1,70 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: black;
+  }
+  
+  /* Background full screen */
+  .hero {
+    height: 100vh;
+    background: url('/round-loop.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+  }
+  
+  /* Center circular image */
+  .center-image {
+    width: 35vw;
+    max-width: 500px;
+    height: 35vw;
+    max-height: 500px;
+    background: url('/pattern.jpg') no-repeat center center/cover;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  }
+  
+  /* Text inside circular image */
+  .text-overlay {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  }
+  
+  /* Responsive Text & Circle Size */
+  @media (max-width: 768px) {
+    .center-image {
+      width: 60vw;
+      height: 60vw;
+    }
+  
+    .text-overlay {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .center-image {
+      width: 70vw;
+      height: 70vw;
+    }
+  
+    .text-overlay {
+      font-size: 1.2rem;
+    }
+  }
+  

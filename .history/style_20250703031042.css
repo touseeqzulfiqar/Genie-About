@@ -1,0 +1,158 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: black;
+    color: white;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 150vh;
+    background: url('/round-loop.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+  }
+  
+  .center-image {
+    width: 35vw;
+    max-width: 500px;
+    height: 35vw;
+    max-height: 500px;
+    background: url('/pattern.jpg') no-repeat center center/cover;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  }
+  
+  .text-overlay {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  }
+  
+  /* Section Styling */
+  .custom-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+  
+  .content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  /* Alternate layout (section-2, section-4) */
+  .content.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  /* Left Text */
+  .left-text {
+    flex: 0 0 30%;
+  }
+  
+  .left-text p {
+    font-size: 1.8rem;
+    color: #ccc;
+  }
+  
+  .left-text h2 {
+    font-size: 2.5rem;
+    margin-top: 10px;
+  }
+  
+  /* Right Glass Card */
+  .right-card {
+    flex: 1;
+    padding: 35px;
+    border-radius: 20px 0 0 20px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  /* Left Glass Card (used on reverse layout) */
+  .left-card {
+    flex: 1;
+    padding: 35px;
+    border-radius: 0px 20px 20px 0px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  /* Card Content Text */
+  .right-card p,
+  .left-card p {
+    font-size: 1.2rem;
+    color: #eee;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .content,
+    .content.reverse {
+      flex-direction: column;
+    }
+  
+    .left-text,
+    .right-card,
+    .left-card {
+      flex: 1 1 100%;
+    }
+  
+    .center-image {
+      width: 60vw;
+      height: 60vw;
+    }
+  
+    .text-overlay {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .center-image {
+      width: 70vw;
+      height: 70vw;
+    }
+  
+    .text-overlay {
+      font-size: 1.2rem;
+    }
+  
+    .left-text p {
+      font-size: 1.3rem;
+    }
+  
+    .left-text h2 {
+      font-size: 2rem;
+    }
+  }
+  

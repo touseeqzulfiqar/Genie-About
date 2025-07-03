@@ -1,0 +1,149 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: black;
+    color: white;
+  }
+  
+  /* Background full screen */
+  .hero {
+    height: 150vh;
+    background: url('/round-loop.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+  }
+  
+  /* Center circular image */
+  .center-image {
+    width: 35vw;
+    max-width: 500px;
+    height: 35vw;
+    max-height: 500px;
+    background: url('/pattern.jpg') no-repeat center center/cover;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  }
+  
+  /* Text inside circular image */
+  .text-overlay {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  }
+  
+  /* Responsive Text & Circle Size */
+  @media (max-width: 768px) {
+    .center-image {
+      width: 60vw;
+      height: 60vw;
+    }
+  
+    .text-overlay {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .center-image {
+      width: 70vw;
+      height: 70vw;
+    }
+  
+    .text-overlay {
+      font-size: 1.2rem;
+    }
+  }
+
+  /* section  */
+  .section-image{
+    width: 100%;
+    /* height: 100vh; */
+    background: url('/section-image.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .custom-section {
+    padding: -80px -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-right: 20px;
+  }
+  
+  /* Content */
+  .content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  /* Left Text — Take 30% */
+  .left-text {
+    flex: 0 0 30%;
+  }
+  
+  /* Right Card — Take 70% */
+  .right-card {
+    flex: 1;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Typography */
+  .left-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .left-text p {
+    font-size: 1.05rem;
+    color: #ccc;
+  }
+  
+  .right-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .right-card p {
+    color: #ddd;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+    }
+  
+    .left-text,
+    .right-card {
+      flex: 1 1 100%;
+    }
+  } 
